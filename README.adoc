@@ -15,7 +15,7 @@ $ ./mvnw spring-boot:run
 [source,bash]
 .Execute in console using curl (piping to jq is optional)
 ----
-$ curl -s localhost:8080/teams | jq .
+$ curl -s localhost:8080/nba/teams | jq .
 ----
 
 * Sample output
