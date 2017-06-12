@@ -1,0 +1,62 @@
+= Spring Boot kotlin app consuming NBA rest API
+
+== Running app
+
+* Navigate to project root & start the app
++
+[source,bash]
+.Execute in console
+----
+$ ./mvnw spring-boot:run
+----
+
+* Execute get all teams query
++
+[source,bash]
+.Execute in console using curl (piping to jq is optional)
+----
+$ curl -s localhost:8080/teams | jq .
+----
+
+* Sample output
++
+[source,json]
+----
+[
+  {
+    "teamId": "1610612737",
+    "city": "Atlanta",
+    "nickname": "Hawks"
+  },
+  {
+    "teamId": "1610612738",
+    "city": "Boston",
+    "nickname": "Celtics"
+  },
+  {
+    "teamId": "1610612751",
+    "city": "Brooklyn",
+    "nickname": "Nets"
+  },
+  {
+    "teamId": "1610612766",
+    "city": "Charlotte",
+    "nickname": "Hornets"
+  },
+  {
+    "teamId": "1610612741",
+    "city": "Chicago",
+    "nickname": "Bulls"
+  },
+  {
+    "teamId": "1610612739",
+    "city": "Cleveland",
+    "nickname": "Cavaliers"
+  },
+  {
+    "teamId": "1610612742",
+    "city": "Dallas",
+    "nickname": "Mavericks"
+  }
+]
+----
